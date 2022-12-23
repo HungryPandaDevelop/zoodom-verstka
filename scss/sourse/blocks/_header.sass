@@ -1,0 +1,63 @@
+$headerHeight: 60px
+.stub
+	height: $headerHeight
+header
+	@include positionElement(100%, $headerHeight, 0, auto, left, top, 3, fixed )
+	color: $whiteColor
+	font-size: $smallSize
+	.main-grid
+		height: 100%
+		position: relative
+	.header-bg
+		@include positionElement(100%,100%,0,0)
+		background-color: $blueColor
+		transition: ease-out 0.25s
+		opacity: 0
+	a
+		text-decoration: none
+		&:hover
+			color: $orangeColor
+	.hamburger-btn
+		margin-left: 30px
+		margin-right: 30px
+	.search-btn
+		margin-left: auto
+	.basket-btn
+		margin-left: auto
+	.header-line
+		@include positionElement(100%, 1px, 0,100%)
+		background-color: $whiteColor
+		transition: ease-out 0.25s
+	&.stick
+		background-color: $blueColor
+		.header-line
+			opacity: 0
+		.header-bg
+			opacity: 1
+.nav-header
+	width: 100%
+	display: flex
+	li
+		margin-right: 15px
+.btn-header-container
+	display: inline-block
+.logo
+	position: relative
+	font-size: $mediumSize
+	a
+		margin: auto 0
+
+	img
+		width: 100%
+		max-width: 60px
+.nav-nologged
+	li
+		display: inline-block
+	span
+		display: inline-block
+		margin: 0 8px
+.cabinet-popup-roof
+	display: none
+@media (max-width: 998px)
+	.cabinet-popup-roof
+		display: block

@@ -1,0 +1,39 @@
+/*-checkbox-start-*/
+
+.checkbox,
+.radio
+	display: inline-block
+	position: relative
+	padding: 5px
+	padding-left: 35px
+	cursor: pointer
+	user-select: none
+	vertical-align: top
+	margin-right: 15px
+
+	label
+		cursor: pointer
+	&:last-child
+		margin-right: 0
+	input
+		@include positionElement(95%, 100%)
+		opacity: 0
+
+		&:checked~span
+			&:after
+				display: block
+
+	span
+		@include positionElement(20px, 20px, 0px, 5px)
+		border: 1px solid $blueColor
+		border-radius: 100%
+		transition: ease-out 0.5s
+		cursor: pointer
+		&:after
+			content: ""
+			@include positionElement(10px, 10px, 4px, 4px)
+			background-color: $blueColor
+			border-radius: 100%
+			display: none
+
+/*-checkbox-wp-*/
