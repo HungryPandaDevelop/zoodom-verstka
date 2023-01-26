@@ -1,0 +1,169 @@
+
+$borderSize: calc(100% - 58px)
+.breed-slider
+  // display: flex
+  // gap: 15px
+
+  img
+    width: 100%
+
+.breed-slider-add
+  width: 180px
+
+.breed-slider-main
+  // width: calc( 100% - 180px )
+  // height: 400px
+  position: relative
+  overflow: hidden
+  border-radius: 20px
+  .owl-carousel,
+  .owl-item,
+  .breed-slider-main-item
+    height: 100%
+.breed-slider-add-item
+  font-size: 0
+  height: 100%
+  margin: 0 0 15px
+  position: relative
+  overflow: hidden
+  border-radius: 10px
+  &:last-child
+    margin: 0
+.breed-adv-box
+  position: relative
+.breed-adv
+  display: grid
+  grid-template-columns: repeat(2,1fr)
+  gap: 30px 15px
+
+  position: sticky
+  top: 90px
+  .btn-container
+    margin-top: 0px
+    grid-column: span 2
+    .btn
+      width: 100%
+.breed-adv-item
+  display: flex
+
+  h3
+    font-size: $standartSize
+    margin: 0 0 0px
+    color: $grayColor
+    font-family: "medium"
+    // font-family: "semiBold"
+    // font-family: "light"
+  h4
+    color: $blueColor
+    font-size: 14px
+    font-family: "medium"
+
+.breed-description
+
+  // margin-top: 45px
+  h2
+    font-size: 28px
+    margin-bottom: 15px
+  h3
+    font-size: 18px
+    color: $blackColor
+  img
+    width: 100%
+    height: auto
+    position: relative
+    overflow: hidden
+    border-radius: 30px
+.project-detail-main
+  margin-top: 12px
+
+  h3
+    font-size: 32px
+    margin: 0 0 30px
+
+$widthImg: 60px
+.breed-adv-item-img
+  width: $widthImg
+  img
+    width: 50px
+    height: 50px
+    border-radius: 0
+.breed-adv-item-info
+  width: calc(100% - $widthImg)
+.breed-description-roof
+  // display: flex
+  // justify-content: space-between
+  margin: 30px 0
+  h3
+    margin-bottom: 15px
+    // margin: auto 0
+.breed-description-roof-content
+  background-color: $blueColor
+  border-radius: 30px
+  padding: 15px
+  color: $whiteColor
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  padding-left: 45px
+  h2
+    color: inherit
+    grid-column: span 4
+    img, span
+      vertical-align: middle
+    img
+      width: 65px
+      margin-right: 15px
+  .breed-adv-item
+    margin-right: 0px
+    display: inline-flex
+  h3
+    display: none
+  .breed-adv-item-info
+    display: flex
+    h4
+      color: $whiteColor
+      margin: auto 0
+.breed-description
+.breed-description-text
+  margin-left: 60px
+  font-size: 14px
+  margin-bottom: 15px
+  grid-column: span 4
+.project-img-border
+  transition: ease-out 0.5s
+  @include positionElement($borderSize, $borderSize, 30px, 30px, left, top, 2)
+.breed-main
+  .image-gallery
+    height: 510px
+    .image-gallery-content,
+    .image-gallery-slide-wrapper,
+    .image-gallery-swipe,
+    .image-gallery-slides,
+    .image-gallery-slide
+      height: 100%
+      // position: relative
+    .image-gallery-image
+      // @include positionElement(100%,100%,0,0)
+      height: 100%
+      object-fit: cover
+    .image-gallery-slides
+      border-radius: 30px
+  .image-gallery-left-nav,
+  .image-gallery-right-nav
+    padding: 0
+    margin: 0 23px
+    &:hover
+      opacity: 0.8
+    svg
+      display: none
+  .image-gallery-left-nav
+    @include icoEl(20px, 20px,"../images/arr-left.svg")
+  .image-gallery-right-nav
+    @include icoEl(20px, 20px,"../images/arr-right.svg")
+  .image-gallery-thumbnail
+    position: relative
+    overflow: hidden
+    border-radius: 15px
+    cursor: pointer
+    margin-bottom: 3px
+  .image-gallery-thumbnail.active, .image-gallery-thumbnail:focus
+    border-color: $blueColor

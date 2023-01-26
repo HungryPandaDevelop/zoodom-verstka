@@ -50,7 +50,12 @@
 		color: $whiteColor
 		i
 			background-image: url("../images/cabinet/cancel-white.svg")
-
+.cabinet-add-cards
+	i
+		@include icoEl(20px,20px, "../images/cabinet/cabinet-add-cards-white.svg")
+	&:hover
+		i
+			background-image: url("../images/cabinet/cabinet-add-cards-blue.svg")
 .btn-header
 	display: inline-block
 	border: 1px solid $whiteColor

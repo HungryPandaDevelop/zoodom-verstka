@@ -17,50 +17,46 @@
     text-align: center
     font-weight: 600
     text-decoration: none
-    line-height: 27px
-    border: 2px solid $whiteColor
+    line-height: 30px
     font-size: $smallSize
     vertical-align: middle
     margin: 0 15px
-    background-color: $greenColor
-    border-radius: 4px
-    box-shadow: $shadowThree
+    border-radius: 100%
     transition: ease-out 0.25s
-    color: $whiteColor
+    color: #878787
     cursor: pointer
   li:hover a,
   li.selected a
     color: $whiteColor
-    background-color: $orangeColor
+    background-color: $blueColor
     transform: scale(1.1)
-    box-shadow: $shadowFour
 
   .previous,
   .next
     a
       background-size: 100%
       font-size: 0
-      background-color: $greenColor
 
     &.disabled
       opacity: 0
       visibility: hidden
 
   .pagination-dotted
-    background-color: $greenColor
-    color: $whiteColor
+    color: $grayColor
 
   .previous
     a
-      @include icoEl(30px, 30px, "../images/arrows/arrow-left-white.svg")
+      @include icoEl(30px, 30px, "../images/arrows/arrow-left-blue.svg")
       &:hover
-        background-color: $orangeColor
+        background-color: $blueColor
+        background-image: url("../images/arrows/arrow-left-white.svg")
 
   .next
     a
-      @include icoEl(30px, 30px, "../images/arrows/arrow-right-white.svg")
+      @include icoEl(30px, 30px, "../images/arrows/arrow-right-blue.svg")
       &:hover
-        background-color: $orangeColor
+        background-color: $blueColor
+        background-image: url("../images/arrows/arrow-right-white.svg")
 
 .ico-in
   i,span

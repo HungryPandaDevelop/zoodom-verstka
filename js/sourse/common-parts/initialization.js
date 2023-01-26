@@ -6,6 +6,13 @@ owlMain.owlCarousel({
   dots: true,
   margin: 30
 });
+let owlDetail = $('.owl-detail');
+
+owlDetail.owlCarousel({
+  items: 1,
+  nav: true,
+  dots: false,
+});
 
 let owlGallery = $('.market-owl');
 

@@ -18,7 +18,12 @@ $gap: 15px
 	grid-column-gap: $gap
 
 .catalog-grid
-	grid-gap: $gap
+	display: grid
+	grid-template-columns: repeat($gridCount, 1fr)
+	gap: $gap
+	padding: 0 $indent
+	max-width: $maxWidth
+	margin: 0 auto
 
 .main-full
 	padding: 0 $indent
@@ -36,11 +41,11 @@ section
 	margin: 0
 	font-family: "regular"
 .head-section
-	margin-bottom: 45px
+	margin-bottom: 30px
 	display: flex
 
 	h2
-		font-size: $hugeSize
+		font-size: $largeSize
 		margin: 0 0 15px
 	.back-link
 		margin: auto 0 auto auto
@@ -76,6 +81,7 @@ section
 	position: relative
 	min-height: calc(100vh - 130px)
 	h1
+		font-size: 38px
 		padding: 30px 0 30px
 		color: $blackColor
 

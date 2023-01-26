@@ -2,7 +2,7 @@
 .custom-select
 	padding: 9px 12px
 	border: 0
-	font-family: inherit
+	font-family: "medium"
 	font-size: $standartSize
 	font-weight: 500
 	resize: none
@@ -12,15 +12,32 @@
 	border-radius: 8px
 	border: 1px solid $grayColor
 	transition: ease-out 0.5s
+	&::placeholder
+		font-family: "regular"
 	&:focus
 		outline: 0
-		box-shadow: $shadowSecond
+		// box-shadow: $shadowThree
+.cabinet-account
+	position: relative
+	.input-decorate
+		border-radius: 0
+		border: 0
+		border-bottom: 1px solid #686868
+		padding-left: 0
+		padding-bottom: 5px
+		padding-top: 4px
+		margin-left: 40px
+		width: calc(100% - 40px)
+	.input-error
+		border-color: $redColor
+	.input-error-text
+		margin-left: 40px
 .file-decorate-error span,
 .input-error
 	border-color: $redColor
 .mail-error
 	border-color: $orangeColor
-.error-hint
+.input-error-text
 	color: $redColor
 	margin-top: 2px
 .form-default
@@ -34,5 +51,34 @@
 		margin: 0 0 15px
 	button
 		margin: 0 0 15px
-	.form-btn-container
-		padding-top: 15px
+	.btn-container
+		padding-top: 30px
+		.btn
+			margin-right: 30px
+.auth-form
+	padding-left: 18px
+.forgot-password
+	margin-top: 30px
+	padding-left: 30px
+.search-container
+	margin-bottom: 45px
+	position: relative
+	i
+		@include positionElement(30px,30px,0,0, right)
+		margin: 4px
+		@include bgImageEl("../images/icons/loop-black.svg")
+	.input-decorate
+		padding-right: 45px
+	.preloader-container
+		@include positionElement(30px,30px,0,0, right)
+		margin: 4px
+	.preloader
+		width: 25px
+		height: 25px
+		left: 0%
+		top: 10%
+	.input-search-hint
+		margin-top: 5px
+		font-size: 12px
+		color: #000
+		font-family: "medium"

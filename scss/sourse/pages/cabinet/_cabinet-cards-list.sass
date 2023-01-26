@@ -4,12 +4,10 @@
 	.add-cards-container
 		padding: 15px
 		border-bottom: 1px solid $grayColorSecond
-		background: #fcfcfc
 	table
 		width: 100%
 		border-collapse: collapse
 	tr
-		background-color: $whiteColor
 		transition: ease-out 0.25s
 	th, td
 		padding: 15px 30px
@@ -20,11 +18,11 @@
 		font-weight: 600
 		a
 			text-decoration: none
-			color: $greenColor
+			color: $blueColor
 			&:hover
 				color: $orangeColor
 	tr:hover
-		background-color: rgba($greenColor, 0.05)
+		background-color: rgba($blueColor, 0.05)
 	th:last-child
 		text-align: right
 	td:last-child
@@ -102,16 +100,19 @@
 	&:first-child
 		margin-left: auto
 .table-btn--edit
-	background-color: rgba($greenColor, 0.2)
-	@include bgImageEl("../images/cabinet/edit-green.svg", 60%)
+	border: 1px solid $blueColor
+	background-color: $whiteColor
+	@include bgImageEl("../images/cabinet/edit-blue.svg", 60%)
 	&:hover
-		background-color: $greenColor
+		background-color: $blueColor
 		background-image: url("../images/cabinet/edit-white.svg")
 .table-btn--delete
-	background-color: rgba($redColor, 0.2)
-	@include bgImageEl("../images/cabinet/trash-red.svg", 60%)
+	border: 1px solid $blueColor
+	background-color: $whiteColor
+	// background-color: rgba($redColor, 0.2)
+	@include bgImageEl("../images/cabinet/trash-blue.svg", 60%)
 	&:hover
-		background-color: $redColor
+		background-color: $blueColor
 		background-image: url("../images/cabinet/trash-white.svg")
 .table-btn--view
 	background-color: rgba($orangeColor, 0.1)
@@ -129,7 +130,7 @@
 .empty-list-container
 	text-align: center
 	font-size: 18px
-	color: $greenColor
+	color: $blueColor
 	padding: 30px 15px
 .empty-list-text
 	display: inline-block

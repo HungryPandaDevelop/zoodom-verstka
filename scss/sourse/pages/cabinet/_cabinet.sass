@@ -1,20 +1,43 @@
-
+.account-page
+  padding-top: 30px
+  .main-grid
+    height: 100%
+  h2
+    font-size: 38px
+    margin: 0 0 30px
 .cabinet-account
   position: relative
-  overflow: hidden
   .main-grid
     padding: 0
   h3
-    font-size: $largeSize
-    border-bottom: 1px solid $grayColorSecond
-    padding: 0 0 5px
-    margin: 0 0 15px
 
+    margin: 0 0 0px
+    font-family: "bold"
+    font-size: 18px
+    padding-left: 40px
+  .num-offset
+    margin-left: 0px
+    margin-right: 18px
+    font-style: normal
+    font-family: "bold"
+    font-size: 18px
+    color: $blackColor
+    position: absolute
+    left: 0
   .btn-container
     display: flex
     gap: 30px
   .account-item
     margin: 0 0 30px
+    position: relative
+    .checkbox-container,
+    .btn-container
+      padding-left: 40px
+      label
+        padding-left: 0
+    label
+      display: inline-block
+      padding-left: 40px
     b
       display: block
       margin: 0 0 8px
@@ -35,7 +58,9 @@
     b
       display: inline-block
       margin-bottom: 8px
-
+.account-item
+  label
+    font-size: 18px
 .map-input
   position: relative
   .hidden-field
@@ -44,13 +69,14 @@
 
 .complex-input
   position: relative
-  border-bottom: 1px solid $grayColorSecond
   margin-bottom: 30px
   padding-right: 45px
   padding-bottom: 15px
   .input-decorate,
   .custom-select
     margin: 0 0 15px
+    margin-left: 40px
+    width: calc(100% - 40px)
 .complex-delete-field
   @include bgImageEl("../images/cabinet/trash-white.svg", 20px)
   @include positionElement(30px,30px,0,0%,right)
@@ -73,6 +99,10 @@
 .empty-face
   background-size: 80%
   background-position: center
+.type-cabinet-item
+  max-width: 1000px
+  .checkbox
+    width: 20%
 @media (max-width: 992px)
   .cards-face-container
     width: 100%

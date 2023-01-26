@@ -12,6 +12,10 @@
   h2
     font-size: $mediumSize
     margin: 0 0 30px
+.rew-default-container .btn-container
+  margin-top: 15px
+  display: flex
+  gap: 30px
 
 .reviews-detail
   margin-top: 45px
@@ -19,7 +23,7 @@
     padding: 0
   h2
     font-weight: 400
-    font-size: $mediumSize
+    font-size: 28px
     margin: 0 0 30px
   .form-btn-container
     text-align: right
@@ -36,16 +40,16 @@
   margin-bottom: 30px
   background-color: $whiteColor
   max-width: 930px
-  box-shadow: $shadowFive
   border-radius: 8px
   h2
     font-size: $standartSize
-    color: $greenColor
-    margin: 0
+    margin: 0 30px 0 0
+    display: inline-block
   h3
-    font-size: inherit
     font-size: $smallSize
     font-weight: 400
+    display: inline-block
+    color: $grayColor
   .reviews-name
     display: inline-block
     text-align: left
@@ -67,35 +71,42 @@
   vertical-align: top
   margin: 0 0 15px
   vertical-align: middle
-.reviews-item--extra
-  .reviews-img
-    margin-right: 15px
-  .reviews-text
-    color: $greenColor
-    margin: auto 0
-    font-size: $standartSize
-  .reviews-body
-    display: flex
-    width: 100%
-.reviews-audio
-  text-align: center
-  margin-top: 15px
+
 .reviews-stars
   margin: 0 0 15px
-  text-align: right
 .star-ico
   display: inline-block
   @include icoEl(24px, 24px, '../images/icons/star-black.svg')
   cursor: pointer
 
-.star-ico.active,
-.star-ico:hover
-  background-image: url("../images/icons/star-fill-black.svg")
-
+  &.active,
+  &:hover
+    background-image: url("../images/icons/star-fill-black.svg")
+.star-ico--green
+  background-image: url("../images/icons/star-green.svg")
+  &:hover,
+  &.active
+    background-image: url("../images/icons/star-fill-green.svg")
 .input-stars
   position: absolute
   opacity: 0
   left: 0
+.title-rew-small
+  h3
+    font-size: 16px
+    margin: 0
+.rew-switch
+  background-color: rgba($blueColor, 0.1)
+  padding: 15px
+  border-radius: 4px
+  width: 50%
+  label,
+  .switch-container
+    display: inline-block
+    vertical-align: middle
+  label,
+  b
+    margin: 0
 @media print
   .reviews-detail
     padding: 0 15px

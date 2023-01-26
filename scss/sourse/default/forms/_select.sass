@@ -53,3 +53,55 @@
 		@include positionElement(36px, 36px, 5px, 50%, right, top, 2)
 		transform: translateY(-50%)
 /*-custom-select-*/
+
+.city-field
+	padding: 9px 12px
+	border: 0
+	position: relative
+	color: $blackColor
+	border-bottom: 1px solid $grayColor
+	transition: ease-out 0.5s
+	.city-name
+		cursor: pointer
+		&:hover
+			color: $blueColor
+.city-field-container
+	input
+		padding-left: 45px
+	i
+		@include icoEl(30px,30px,"../images/icons/loop-black.svg")
+		position: absolute
+		left: 7px
+		top: 2px
+		padding: 4px
+		opacity: 0.7
+.city-field-arrow
+	@include bgImageEl("../images/arrows/carret-down-gray.svg", 36px)
+	@include positionElement(36px, 36px, 5px, 50%, right, top, 2)
+	transform: translateY(-50%)
+	&.active
+		transform: translateY(-50%) rotate(180deg)
+.city-field-popup
+	@include positionElement(100%, auto, 0, 100%)
+	background-color: $whiteColor
+	ul
+		height: 280px
+		position: relative
+		overflow: auto
+		&::-webkit-scrollbar
+			height: 12px
+			width: 8px
+			background: $grayColorSecond
+
+		&::-webkit-scrollbar-thumb
+			background: $grayColor
+			border-radius: 1ex
+
+		&::-webkit-scrollbar-corner
+			background: $grayColor
+	li
+		padding: 5px
+		cursor: pointer
+
+		&:hover
+			color: $blueColor
