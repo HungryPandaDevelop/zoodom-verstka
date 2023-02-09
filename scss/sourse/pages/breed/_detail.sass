@@ -63,7 +63,6 @@ $borderSize: calc(100% - 58px)
   // margin-top: 45px
   h2
     font-size: 28px
-    margin-bottom: 15px
   h3
     font-size: 18px
     color: $blackColor
@@ -83,6 +82,7 @@ $borderSize: calc(100% - 58px)
 $widthImg: 60px
 .breed-adv-item-img
   width: $widthImg
+  display: flex
   img
     width: 50px
     height: 50px
@@ -99,7 +99,9 @@ $widthImg: 60px
 .breed-description-roof-content
   background-color: $blueColor
   border-radius: 30px
+  margin-bottom: 30px
   padding: 15px
+  gap: 15px
   color: $whiteColor
   display: grid
   grid-template-columns: repeat(4, 1fr)
@@ -167,3 +169,89 @@ $widthImg: 60px
     margin-bottom: 3px
   .image-gallery-thumbnail.active, .image-gallery-thumbnail:focus
     border-color: $blueColor
+  .image-gallery-slide
+    border-radius: 30px
+    // position: relative
+    overflow: hidden
+.breed-main .image-gallery .fullscreen .image-gallery-slides,
+.breed-main .image-gallery .fullscreen .image-gallery-slide
+  border-radius: 0
+
+.fullscreen
+  .image-gallery-fullscreen-button
+    // background-color: red
+    width: 60px
+    height: 60px
+
+    top: 0
+    bottom: auto
+    box-shadow: none
+    @include bgImageEl("../images/icons/close-white.svg", 30px)
+    svg
+      display: none
+.breed-slider-wrapper-mobile
+  display: none
+@media (max-width: 1280px)
+  .breed-adv-item-img
+    width: 40px
+    display: flex
+    img
+      width: 30px
+      height: 30px
+      margin: auto
+  .breed-adv-item-info
+    width: calc(100% - 40px)
+  .breed-description-roof-content
+    padding-left: 15px
+
+@media (max-width: 992px)
+  .breed-adv
+    display: block
+  .breed-adv-item
+    margin-bottom: 8px
+  .breed-adv-item-img img
+    width: 20px
+    height: 20px
+
+  .breed-description-roof-content
+    padding-left: 15px
+@media (max-width: 768px)
+  .breed-description-roof-content
+    display: block
+    h2
+      font-size: 18px
+      margin-bottom: 15px
+@media (max-width: 576px)
+  .breed-main .image-gallery .image-gallery-slide-wrapper
+    height: calc(100% - 100px)
+  .breed-slider-wrapper-desktop
+    display: none
+  .breed-slider-wrapper-mobile
+    display: block
+  .breed-adv-mobile
+    display: block
+    margin: 15px 0px
+
+  .breed-main .image-gallery
+    height: 380px
+  .breed-description-roof-content
+    text-align: center
+    h2
+      span
+        display: block
+      img
+        margin: 0 0 15px
+  .breed-description-text
+    margin-left: 0
+  .breed-description
+    text-align: center
+  .breed-adv
+    .btn-container
+      margin-top: 30px
+    .btn
+      font-size: 12px
+  .breed-description
+    h2
+      font-size: 17px
+  .breed-main .fullscreen .image-gallery-image
+    object-fit: contain

@@ -2,7 +2,7 @@ $headerHeight: 60px
 .stub
 	height: $headerHeight
 header
-	@include positionElement(100%, $headerHeight, 0, auto, left, top, 3, fixed )
+	@include positionElement(100%, $headerHeight, 0, auto, left, top, 5, fixed )
 	color: $whiteColor
 	font-size: $smallSize
 	background-color: $blueColor
@@ -29,6 +29,7 @@ header
 		@include positionElement(100%, 1px, 0,100%)
 		background-color: $whiteColor
 		transition: ease-out 0.25s
+		display: none
 	&.stick
 		background-color: $blueColor
 		.header-line
@@ -59,6 +60,10 @@ header
 		margin: 0 8px
 .cabinet-popup-roof
 	display: none
+@media (max-width: 1440px)
+	header
+		.hamburger-btn
+			margin: auto
 @media (max-width: 998px)
 	.cabinet-popup-roof
 		display: block

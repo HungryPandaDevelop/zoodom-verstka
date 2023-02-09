@@ -12,15 +12,35 @@
   h2
     font-size: $mediumSize
     margin: 0 0 30px
-.rew-default-container .btn-container
-  margin-top: 15px
-  display: flex
-  gap: 30px
-
-.reviews-detail
-  margin-top: 45px
+.rew-default-container
   .main-grid
     padding: 0
+  .btn-container
+    display: flex
+    gap: 30px
+    padding: 0
+    margin: 0
+    position: relative
+  .btn
+    margin: auto 0 auto auto
+.popup-rew-auth
+  position: absolute
+  width: 500px
+  font-size: 14px
+  padding: 15px
+  background-color: #dce7ff
+  z-index: 2
+  border-radius: 8px
+  left: 50%
+  top: 50%
+  transform: translateX(-50%) translateY(-50%)
+  .btn
+    padding: 5px
+    font-size: inherit
+.rew-hint-send
+  margin-top: 15px
+.reviews-detail
+  margin-top: 45px
   h2
     font-weight: 400
     font-size: 28px
@@ -38,9 +58,11 @@
 .reviews-item
   padding: 15px
   margin-bottom: 30px
-  background-color: $whiteColor
+  background-color: #dce7ff
   max-width: 930px
   border-radius: 8px
+  .main-grid
+    padding: 0
   h2
     font-size: $standartSize
     margin: 0 30px 0 0
@@ -58,7 +80,10 @@
     font-size: $smallSize
 .reviews-info
   text-align: center
-
+.reviews-roof
+  display: flex
+  justify-content: space-between
+  margin-bottom: 12px
 .reviews-img
   width: 102px
   height: 102px
@@ -71,22 +96,28 @@
   vertical-align: top
   margin: 0 0 15px
   vertical-align: middle
-
+.reviews-stars-container
+  width: 210px
+  text-align: right
+  margin-top: -2px
 .reviews-stars
-  margin: 0 0 15px
+  margin: 0 0 0px
+  display: flex
+  justify-content: space-between
+  label
+    margin: 0
 .star-ico
   display: inline-block
-  @include icoEl(24px, 24px, '../images/icons/star-black.svg')
+  @include icoEl(24px, 24px, '../images/icons/star-blue.svg')
   cursor: pointer
-
   &.active,
   &:hover
-    background-image: url("../images/icons/star-fill-black.svg")
+    background-image: url("../images/icons/star-fill-blue.svg")
 .star-ico--green
-  background-image: url("../images/icons/star-green.svg")
+  background-image: url("../images/icons/star-blue.svg")
   &:hover,
   &.active
-    background-image: url("../images/icons/star-fill-green.svg")
+    background-image: url("../images/icons/star-fill-blue.svg")
 .input-stars
   position: absolute
   opacity: 0
@@ -95,18 +126,39 @@
   h3
     font-size: 16px
     margin: 0
-.rew-switch
-  background-color: rgba($blueColor, 0.1)
-  padding: 15px
-  border-radius: 4px
-  width: 50%
-  label,
-  .switch-container
-    display: inline-block
-    vertical-align: middle
-  label,
-  b
-    margin: 0
+@media (max-width: 1280px)
+  .reviews-img
+    width: 60px
+    height: 60px
+  .star-ico
+    width: 18px
+    height: 18px
+@media (max-width: 992px)
+  .reviews-detail h2
+    font-size: 21px
+  .rew-switch
+    margin-bottom: 15px
+  .rew-default-container
+    .btn-container
+      grid-column-start: 1
+    .btn
+      margin: 0
+@media (max-width: 576px)
+  .reviews-detail
+    h2
+      margin-bottom: 15px
+  .reviews-roof
+    display: block
+    h2
+      margin: 0
+  .reviews-stars-container
+    width: 50%
+    text-align: right
+    margin-top: 0
+  .reviews-item
+    .reviews-stars-container
+      width: 100%
+      margin-top: -20px
 @media print
   .reviews-detail
     padding: 0 15px

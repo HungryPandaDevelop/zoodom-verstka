@@ -68,12 +68,27 @@
 	b
 		display: inline-block
 		margin-right: 8px
+
 @media (max-width: 1620px)
 	.nurseries-item h3
 		font-size: 20px
 @media (max-width: 1280px)
+	.nurse-wrap-item
+		&:last-child
+			display: none
 	.nurseries-item-info
 		padding: 15px 15px
+@media (max-width: 992px)
+	.nurse-wrap-item
+		margin-bottom: 30px
+	.nurse-wrap-item
+		&:last-child
+			display: block
 @media (max-width: 576px)
+	.nurseries-item-text
+		margin: 0
 	.nurseries-item-info
 		height: auto
+		padding: 15px 0 0
+		h3
+			padding: 0
