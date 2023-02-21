@@ -57,12 +57,17 @@
 .city-field
 	padding: 9px 12px
 	border: 0
+	height: 38px
 	position: relative
 	color: $blackColor
 	border-bottom: 1px solid $grayColor
 	transition: ease-out 0.5s
+	.city-input
+		padding-left: 10px
 	.city-name
 		cursor: pointer
+		height: 100%
+		padding-left: 30px
 		&:hover
 			color: $blueColor
 .city-field-container
@@ -82,7 +87,7 @@
 	&.active
 		transform: translateY(-50%) rotate(180deg)
 .city-field-popup
-	@include positionElement(100%, auto, 0, 100%)
+	@include positionElement(100%, auto, 0, 100%,left,top,2)
 	background-color: $whiteColor
 	ul
 		height: 280px
@@ -101,6 +106,7 @@
 			background: $grayColor
 	li
 		padding: 5px
+		padding-left: 50px
 		cursor: pointer
 
 		&:hover

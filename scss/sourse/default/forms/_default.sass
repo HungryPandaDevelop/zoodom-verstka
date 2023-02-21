@@ -23,7 +23,10 @@
 	&:focus
 		outline: 0
 		// box-shadow: $shadowThree
-
+.account-item
+	label
+		font-size: 18px
+		position: relative
 .input-animate-label
 	position: relative
 	padding-top: 30px
@@ -80,11 +83,11 @@
 	margin-bottom: 45px
 	position: relative
 	i
-		@include positionElement(30px,30px,0,26px, right)
+		@include positionElement(30px,30px,0,26px)
 		margin: 4px
 		@include bgImageEl("../images/icons/loop-black.svg")
 	.input-decorate
-		padding-right: 45px
+		padding-left: 45px
 	.preloader-container
 		@include positionElement(30px,30px,0,0, right)
 		margin: 4px
@@ -95,6 +98,7 @@
 		top: 26px
 	label
 		color: #000
+		padding-left: 45px
 	.input-search-hint
 		margin-top: 5px
 		font-size: 12px
@@ -117,3 +121,15 @@
 	b
 		font-size: 14px
 		font-weight: 700
+.cabinet-account .mail-input-box.account-item
+	input
+		@include bgImageEl("../images/icons/e-mail-blue.svg", 23px, 0 6px)
+		padding-left: 38px
+	label
+		padding-left: 80px
+.cabinet-account .pass-input-box.account-item
+	input
+		@include bgImageEl("../images/icons/pass-blue.svg", 23px, 0 6px)
+		padding-left: 38px
+	label
+		padding-left: 80px

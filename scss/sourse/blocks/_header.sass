@@ -41,6 +41,23 @@ header
 	display: flex
 	li
 		margin-right: 15px
+		position: relative
+		i
+			@include icoEl(20px, 20px, "../images/arrows/carret-down-white.svg", middle, 30px)
+			transition: ease-out 0.25s
+		ul
+			@include positionElement(150px,auto,0,100%)
+			margin-left: -8px
+			background-color: $blueColor
+			padding-top: 10px
+			display: none
+			li
+				padding: 4px 8px
+		&:hover
+			ul
+				display: block
+			i
+				transform: rotate(90deg)
 .btn-header-container
 	display: inline-block
 .logo

@@ -6,7 +6,8 @@ $borderSize: calc(100% - 58px)
 
   img
     width: 100%
-
+.breed-slider-wrapper
+  margin-bottom: 45px
 .breed-slider-add
   width: 180px
 
@@ -35,8 +36,8 @@ $borderSize: calc(100% - 58px)
   display: grid
   grid-template-columns: repeat(2,1fr)
   gap: 30px 15px
-
-  position: sticky
+  margin-bottom: 30px
+  // position: sticky
   top: 90px
   .btn-container
     margin-top: 0px
@@ -191,6 +192,47 @@ $widthImg: 60px
       display: none
 .breed-slider-wrapper-mobile
   display: none
+
+.breed-traits
+  padding: 15px 15px 0
+  border-radius: 15px
+  border: 1px solid $grayColorSecond
+  background-color: $whiteColor
+  margin: 0 0 30px
+  display: grid
+  grid-template-columns: repeat(2,1fr)
+  grid-gap: 30px
+  h2
+    margin-bottom: 25px
+    grid-column: span 2
+.traits-item
+  grid-column: span 1
+  position: relative
+  padding-left: 80px
+  padding-bottom: 15px
+  margin-bottom: 0px
+  border-bottom: 1px solid $grayColorSecond
+  img
+    @include positionElement(50px,50px,0,0)
+  &:last-child
+    border: 0
+.breedsNav
+  border: 2px solid $blueColor
+  padding: 15px
+  border-radius: 30px
+  background-color: $whiteColor
+  position: sticky
+  top: 70px
+  span
+    cursor: pointer
+    text-decoration: none
+    &:hover
+      color: $blueColor
+  h2
+    font-size: $largeSize
+    margin-bottom: 8px
+  li
+    margin-bottom: 4px
 @media (max-width: 1280px)
   .breed-adv-item-img
     width: 40px
@@ -255,3 +297,5 @@ $widthImg: 60px
       font-size: 17px
   .breed-main .fullscreen .image-gallery-image
     object-fit: contain
+  .image-gallery-content.fullscreen
+    height: 100vh
